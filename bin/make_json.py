@@ -7,8 +7,8 @@ def find_mp4_files(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
             if file.endswith(".mp4"):
-                if "overlay" in file:
-                    continue
+                # if "overlay" in file:
+                #     continue
                 full_path = os.path.join(root, file)
                 mp4_files.append(full_path)
     return mp4_files
